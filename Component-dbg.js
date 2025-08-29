@@ -1,6 +1,7 @@
 sap.ui.define(["sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel"
-], (UIComponent,JSONModel) => {
+	"sap/ui/model/json/JSONModel",
+	"sample-app/controller/HelloDialog"
+], (UIComponent,JSONModel,HelloDialog) => {
 	"use strict";
 	return UIComponent.extend("sample-app.Component", {
 		metadata: {
@@ -19,6 +20,7 @@ sap.ui.define(["sap/ui/core/UIComponent",
 			 };
 			 const oModel = new JSONModel(oData);
 			 this.setModel(oModel); 
+			 this.HelloDialog = new HelloDialog();
 	   }
 		
 	});

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/base/Object"],function(e){"use strict";return e.extend("sample-app.controller.HelloDialog",{_getDialog:function(){if(!this._oDialog){this._oDialog=sap.ui.xmlfragment("sample-app.view.HelloDialog",this)}return this._oDialog},open:function(e){const i=this._getDialog();e.addDependent(i);i.open()},onCloseDialog:function(){this._getDialog().close()}})});
+//# sourceMappingURL=HelloDialog.js.map
