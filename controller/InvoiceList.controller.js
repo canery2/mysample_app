@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/model/json/JSONModel"],function(e,n){"use strict";return e.extend("sample-app.controller.InvoiceList",{onInit:function(){const e=new n({currency:"EUR"});this.getView.setModel(e,"view")}})});
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/model/json/JSONModel"],function(e,n){"use strict";return e.extend("sample-app.controller.InvoiceList",{onInit:function(){const e=new n({currency:"EUR"});this.getView().setModel(e,"view")}})});
 //# sourceMappingURL=InvoiceList.controller.js.map
