@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/Component"],function(t){"use strict";return{statusText:function(e){const n=t.getOwnerComponentFor(this);if(!n){return e}const u=n.getModel("i18n").getResourceBundle();switch(e){case"A":return u.getText("invoiceStatusA");case"B":return u.getText("invoiceStatusB");case"C":return u.getText("invoiceStatusC");default:return e}}}});
+//# sourceMappingURL=formatter.js.map
