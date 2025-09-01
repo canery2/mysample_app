@@ -38,18 +38,8 @@
                 console.log(oBundlePromise); 
 
             },
-            _getDialog : function () {
-                if (!this._oDialog) {
-                   this._oDialog = sap.ui.xmlfragment("sample-app.view.HelloDialog",this);
-                   this.getView().addDependent(this._oDialog);
-                }
-                return this._oDialog;
-             },
              onOpenDialog : function () {
-                this._getDialog().open();
-             },
-             onCloseDialog : function () {
-                this._getDialog().close();
+                this.getOwnerComponent().helloDialog.open(this.getView());
              }
         });
      });
