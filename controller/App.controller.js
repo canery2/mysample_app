@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/Device","sap/ui/core/mvc/Controller","sap/ui/model/Filter","sap/ui/model/FilterOperator","sap/ui/model/json/JSONModel","sap/base/strings/formatMessage","sap/m/MessageToast"],(e,s,o,a,i,t,p)=>{"use strict";return s.extend("sample-app.controller.App",{onOpenDialog:function(){this.getOwnerComponent().helloDialog.open(this.getView())}})});
+sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"use strict";return e.extend("sample-app.controller.App",{onOpenDialog:function(){this.getOwnerComponent().helloDialog.open(this.getView())}})});
 //# sourceMappingURL=App.controller.js.map

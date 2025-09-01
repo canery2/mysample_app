@@ -1,27 +1,27 @@
-sap.ui.define(["sap/ui/core/UIComponent",
+ 
+sap.ui.define([
+	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
 	"sample-app/controller/HelloDialog"
-], (UIComponent,JSONModel,HelloDialog) => {
+], function (UIComponent, JSONModel, HelloDialog) {
 	"use strict";
 	return UIComponent.extend("sample-app.Component", {
-		metadata: {
-			
-			manifest: "json"
-			//interfaces: ["sap.ui.core.IAsyncContentCreation"],
+		metadata : {
+			manifest : "json"
 		},
 		init : function () {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
-
+			// set data model
 			const oData = {
 				recipient : {
-				   name : "World"
+					name : "World"
 				}
-			 };
-			 const oModel = new JSONModel(oData);
-			 this.setModel(oModel); 
-			 this.HelloDialog = new HelloDialog();
-	   }
-		
+			};
+			const oModel = new JSONModel(oData);
+			this.setModel(oModel);
+			// set dialog
+			this.helloDialog = new HelloDialog();
+		}
 	});
 });
