@@ -1,2 +1,0 @@
-sap.ui.define(["sap/ui/test/Opa5","./arrangements/Startup","./TodoListJourney","./SearchJourney","./FilterJourney"],(e,t)=>{"use strict";e.extendConfig({arrangements:new t,autoWait:true})});
-//# sourceMappingURL=opaTests.qunit.js.map
