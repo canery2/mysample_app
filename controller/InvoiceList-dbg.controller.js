@@ -26,6 +26,11 @@ sap.ui.define([
 			const oList = this.getView().byId("invoiceList");
 			const oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+		// eslint-disable-next-line no-unused-vars
+		onPress : function (oEvent) {
+			const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail");
 		}
 	});
 });

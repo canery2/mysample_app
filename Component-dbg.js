@@ -22,6 +22,7 @@ sap.ui.define([
 			this.setModel(oModel);
 			// set dialog
 			this.helloDialog = new HelloDialog();
+			this.getRouter().initialize();
 		}
 	});
 });

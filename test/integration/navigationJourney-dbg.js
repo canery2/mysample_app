@@ -13,4 +13,4 @@ sap.ui.require([
 		Then.onTheAppPage.iShouldSeeTheHelloDialog().
 			and.iTeardownMyAppFrame();
 	});
-});
+}); 
