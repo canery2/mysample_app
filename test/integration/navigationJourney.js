@@ -1,0 +1,2 @@
+sap.ui.require(["sap/ui/test/opaQunit"],function(){"use strict";QUnit.module("Navigation");opaTest("Should open the hello dialog",function(e,a,t){e.iStartMyAppInAFrame(jQuery.sap.getResourcePath("sample-app/test",".html"));a.onTheAppPage.iPressTheSayHelloWithDialogButton();t.onTheAppPage.iShouldSeeTheHelloDialog().and.iTeardownMyAppFrame()})});
+//# sourceMappingURL=navigationJourney.js.map

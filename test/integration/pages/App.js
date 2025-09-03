@@ -1,0 +1,2 @@
+sap.ui.require(["sap/ui/test/Opa5"],function(e){"use strict";e.createPageObjects({onTheAppPage:{actions:{iPressTheSayHelloWithDialogButton:function(){return this.waitFor({controlType:"sap.m.Button",success:function(e){e[0].$().trigger("tap")},errorMessage:"Did not find the helloDialogButton button on the app page"})}},assertions:{iShouldSeeTheHelloDialog:function(){return this.waitFor({controlType:"sap.m.Dialog",success:function(){e.assert.ok(true,"The dialog is open")},errorMessage:"Did not find the dialog control"})}}}})});
+//# sourceMappingURL=App.js.map
