@@ -28,9 +28,12 @@ sap.ui.define([
 			oBinding.filter(aFilter);
 		},
 		// eslint-disable-next-line no-unused-vars
-		onPress : function (oEvent) {
+		onPress: function (oEvent) {
+			const oItem = oEvent.getSource();
 			const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("detail");
+			oRouter.navTo("detail", {
+				invoicePath: oItem.getBindingContext("invoice").getPath().substr(1)
+			});
 		}
 	});
 });
