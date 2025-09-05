@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/routing/History"
-], function (Controller,History) {
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
+], function (Controller,History,MessageToast) {
 	"use strict";
 	return Controller.extend("sample-app.controller.Detail", {
 		onInit: function () {
@@ -26,6 +27,12 @@ sap.ui.define([
                 oRouter.navTo("overview",true);
             }
 
-        }
+        },
+		onRatingChange : function (oEvent) {
+			const fValue = oEvent.getParameter("value");
+			const oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+			MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
+		}
+
 	});
 });
