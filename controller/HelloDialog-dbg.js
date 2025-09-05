@@ -1,25 +1,30 @@
+/* eslint-disable no-undef */
 sap.ui.define([
-    "sap/ui/base/Object"
-], function (Object){
-    "use strict";
-    return Object.extend("sample-app.controller.HelloDialog",{
-        _getDialog : function () { 
-            if (!this._oDialog){
-                this._oDialog = sap.ui.xmlfragment("sample-app.view.HelloDialog",this);
-                
-            }
-            return this._oDialog;
-        },
-        open: function (oView) {
-            const oDialog = this._getDialog();
-            oView.addDependent(oDialog);
+	"sap/ui/base/Object"
+], function (Object) {
+	"use strict";
+	return Object.extend("sample-app.controller.HelloDialog", {
+		_getDialog: function () {
+			// create dialog lazily
+			if (!this._oDialog) {
+				// create dialog via fragment factory
+				this._oDialog = sap.ui.xmlfragment("sample-app.view.HelloDialog", this);
+			}
+			return this._oDialog;
+		},
+		open: function (oView) {
+			const oDialog = this._getDialog();
+			// forward compact/cozy style into Dialog
+			jQuery.sap.syncStyleClass(oView.getController().getOwnerComponent().getContentDensityClass(), oView, oDialog);
 
-            oDialog.open();
-        },
+			// connect dialog to view (models, lifecycle)
+			oView.addDependent(oDialog);
 
-        onCloseDialog : function() {
-            this._getDialog().close();
-        }
-    })
-
-} ) 
+			// open dialog
+			oDialog.open();
+		},
+		onCloseDialog: function () {
+			this._getDialog().close();
+		}
+	});
+});

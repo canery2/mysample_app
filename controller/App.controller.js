@@ -1,2 +1,2 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"use strict";return e.extend("sample-app.controller.App",{onOpenDialog:function(){this.getOwnerComponent().helloDialog.open(this.getView())}})});
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";return e.extend("sample-app.controller.App",{onInit:function(){this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass())},onOpenDialog:function(){this.getOwnerComponent().helloDialog.open(this.getView())}})});
 //# sourceMappingURL=App.controller.js.map
