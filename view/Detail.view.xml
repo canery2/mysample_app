@@ -9,7 +9,7 @@
 		navButtonPress="onNavBack">
 		<ObjectHeader
 			intro="{invoice>ShipperName}"
-			title="{invoice>Quantity} x {invoice>ProductName}"/>
-			<wt:ProductRating class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
+			title="{invoice>ProductName}"/>
+		<wt:ProductRating class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
 	</Page>
 </mvc:View>

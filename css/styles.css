@@ -14,3 +14,10 @@ li[data-todo-item-completed="true"] span {
   .myAppDemoWT .myCustomText {
 	font-weight: bold;
   }
+  /*  ProductRating */
+.myAppDemoWTProductRating {
+	padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI {
+	vertical-align: initial;
+}
